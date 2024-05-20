@@ -7,4 +7,5 @@ add_executable(Cpp_Template main.cpp
         common_math.h
         data_structure.h
         advanced_math.h
-        big_integer.h)
+        big_integer.h
+        my_algorithm.h)
