@@ -13,5 +13,23 @@ int main()
     for(int i = 1;i<=5;i++) {
         std::cout << stk.pop() << '\n';
     }
+
+    beau::DoubleLinkedList<int> list;
+    for(int i = 1;i<=10;i++) {
+        list.push_back(i);
+    }
+    list.push(99,5);
+    list.print();
+    list.sort();
+    list.print();
+
+    beau::DoubleLinkedList<int> list2;
+    for(int i = 100;i>=91;i--) {
+        list2.push_back(i);
+    }
+    list.merge(list2);
+    list.print();
+    std::cout << list;
+    std::cout << list.find(99) << '\n';
     return 0;
 }
