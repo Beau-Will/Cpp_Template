@@ -1,5 +1,5 @@
 #include <iostream>
-#include "beau_math.h"
+#include "common_math.h"
 #include "data_structure.h"
 
 int main()

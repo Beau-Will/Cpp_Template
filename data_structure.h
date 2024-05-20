@@ -8,6 +8,8 @@
 #endif //DATA_STRUCTURE_H
 
 #include <vector>
+#include <deque>
+#include <string>
 
 namespace beau {
     template<typename T1,typename T2 = std::vector<T1>>
@@ -48,6 +50,22 @@ namespace beau {
     int Stack<T1, T2>::size() {
         return values.size();
     }
+
+    using intStack = Stack<int>;
+    using i64Stack = Stack<i64>;
+    using charStack = Stack<char>;
+    using stringStack = Stack<std::string>;
+    using doubleStack = Stack<double>;
+
+    template<typename T>
+    using dequeStack = Stack<T,std::deque<T>>;
+
+    using intDequeStack = dequeStack<int>;
+    using i64DequeStack = dequeStack<i64>;
+    using charDequeStack = dequeStack<char>;
+    using stringDequeStack = dequeStack<std::string>;
+    using doubleDequeStack = dequeStack<double>;
+
 }
 
 

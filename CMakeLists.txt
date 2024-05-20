@@ -4,5 +4,6 @@ project(Cpp_Template)
 set(CMAKE_CXX_STANDARD 26)
 
 add_executable(Cpp_Template main.cpp
-        beau_math.h
-        data_structure.h)
+        common_math.h
+        data_structure.h
+        advanced_math.h)
