@@ -1,5 +1,6 @@
 #include <iostream>
-#include "common_math.h"
+#include "advanced_math.h"
+#include "big_integer.h"
 #include "data_structure.h"
 
 int main()
@@ -31,5 +32,12 @@ int main()
     list.print();
     std::cout << list;
     std::cout << list.find(99) << '\n';
+
+    std::cout << beau::isPrimeNumber(2) << std::endl;
+
+    beau::BigInteger A("10000");
+    beau::BigInteger B("99999");
+    A.add(B);
+    std::cout << A << '\n';
     return 0;
 }

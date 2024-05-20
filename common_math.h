@@ -7,9 +7,6 @@
 
 #endif //BEAU_MATH_H
 
-#include <iostream>
-
-
 using i64 = long long;
 using i128 = __int128;
 
@@ -60,4 +57,10 @@ namespace beau {
         return lcm(lcm(nums...),num);
     }
 
+    template<typename T>
+    bool isPrimeNumber(T num) {
+        if(num<2) return false;
+        for(T i = 2;i<=num/i;i++) if(num%i==0) return false;
+        return true;
+    }
 }

@@ -188,5 +188,3 @@ namespace beau {
     using doubleDoubleLinkedList = DoubleLinkedList<double>;
 
 }
-
-

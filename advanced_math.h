@@ -7,7 +7,9 @@
 
 #endif //ADVANCED_MATH_H
 
+#include <iostream>
 #include "common_math.h"
+#include <vector>
 
 namespace beau {
     template<typename T1 = i64,typename T2 = i64,typename T3 = i64>
@@ -26,4 +28,25 @@ namespace beau {
         return quick_power(a,p-2,p);
     }
 
+    template<typename T>
+    void euler_sieve(T n) {
+        std::vector<T> minp, primes;
+        minp.assign(n+1,0);
+        primes.clear();
+        for(T i = 2;i<=n;i++) {
+            if(minp[i] == 0) {
+                minp[i] = i;
+                primes.emplace_back(i);
+            }
+            for(auto p:primes) {
+                if(i*p>n) {
+                    break;
+                }
+                minp[i*p] = p;
+                if(p == minp[i]) {
+                    break;
+                }
+            }
+        }
+    }
 }
